@@ -1,6 +1,7 @@
 import 'package:intl/intl.dart';
 
 import 'package:flutter/material.dart';
+import 'package:todolist/constants.dart';
 import 'package:todolist/widgets/countDownTimer.dart';
 
 class TaskTile extends StatefulWidget {
@@ -67,7 +68,7 @@ class _TaskTileState extends State<TaskTile> {
                             Text(
                               'Start Date',
                               style: TextStyle(
-                                color: Color(0xFF9e9e9e),
+                                color: commonColor2,
                               ),
                             ),
                             SizedBox(
@@ -84,7 +85,7 @@ class _TaskTileState extends State<TaskTile> {
                             Text(
                               'End Date',
                               style: TextStyle(
-                                color: Color(0xFF9e9e9e),
+                                color: commonColor2,
                               ),
                             ),
                             SizedBox(
@@ -101,7 +102,7 @@ class _TaskTileState extends State<TaskTile> {
                             Text(
                               'Time left',
                               style: TextStyle(
-                                color: Color(0xFF9e9e9e),
+                                color: commonColor2,
                               ),
                             ),
                             SizedBox(
@@ -148,7 +149,7 @@ class _TaskTileState extends State<TaskTile> {
                       children: <Widget>[
                         Text('Tick if completed'),
                         Checkbox(
-                          activeColor: Color(0xFFFFC83D),
+                          activeColor: commonColor1,
                           value: widget.isChecked,
                           onChanged: widget.checkboxCallback,
                         ),

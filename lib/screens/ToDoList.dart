@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todolist/constants.dart';
 import 'package:todolist/screens/ToDoListForm.dart';
 import 'package:todolist/widgets/tasks_list.dart';
 
@@ -11,7 +12,7 @@ class ToDoList extends StatelessWidget {
           'To-Do List',
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Color(0xFFFFC83D),
+        backgroundColor: commonColor1,
       ),
       backgroundColor: Colors.grey[300],
       body: SafeArea(

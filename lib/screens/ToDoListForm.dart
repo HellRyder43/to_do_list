@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:date_format/date_format.dart';
 import 'package:flutter_guid/flutter_guid.dart';
 import 'package:provider/provider.dart';
+import 'package:todolist/constants.dart';
 import 'package:todolist/models/task_data.dart';
 
 class ToDoListForm extends StatefulWidget {
@@ -131,7 +132,7 @@ class _ToDoListFormState extends State<ToDoListForm> {
           'Add new To-Do List',
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Color(0xFFFFC83D),
+        backgroundColor: commonColor1,
       ),
       body: SafeArea(
           child: GestureDetector(
