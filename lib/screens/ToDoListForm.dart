@@ -73,8 +73,8 @@ class _ToDoListFormState extends State<ToDoListForm> {
   void _submit() {
     if (_formKey.currentState.validate()) {
       String title;
-      String startdate;
-      String enddate;
+      String startDateVal;
+      String endDateVal;
 
       if (widget.id != null) {
         if (newTitle.isEmpty) {
@@ -84,19 +84,19 @@ class _ToDoListFormState extends State<ToDoListForm> {
         }
 
         if (startDate != null && startDate.text != null) {
-          startdate = startDate.text;
+          startDateVal = startDate.text;
         } else {
-          startdate = widget.parentStartDate;
+          startDateVal = widget.parentStartDate;
         }
 
         if (endDate != null && endDate.text != null) {
-          enddate = endDate.text;
+          endDateVal = endDate.text;
         } else {
-          enddate = widget.parentEndDate;
+          endDateVal = widget.parentEndDate;
         }
 
         Provider.of<TaskData>(context, listen: false)
-            .updateTask(widget.id, title, startdate, enddate, 'timeleft');
+            .updateTask(widget.id, title, startDateVal, endDateVal, 'timeleft');
       } else {
         //Add new
         Provider.of<TaskData>(context, listen: false).addTask(
