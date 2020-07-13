@@ -7,6 +7,10 @@ With this app, you can add you to do items by giving info such as the Title, Sta
 
 ![Screenshot_20200713_081627_com example todolist](https://user-images.githubusercontent.com/46454997/87259989-a7cae880-c4e1-11ea-8530-07856be3b43e.jpg)
 
+You can also delete any to do item simply by tapping the card and slide it from right to left.
+
+<img width="190" alt="slidetodelete" src="https://user-images.githubusercontent.com/46454997/87260117-74d52480-c4e2-11ea-9bd5-f1be9234321f.png">
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
