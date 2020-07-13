@@ -5,20 +5,6 @@ import 'package:provider/provider.dart';
 import 'package:todolist/constants.dart';
 import 'package:todolist/models/task_data.dart';
 
-class FieldValidator {
-  static String validateTitle(String value) {
-    return value.isEmpty ? 'Title can\'t be empty' : null;
-  }
-
-  static String validateStartDate(String value) {
-    return value.isEmpty ? 'Start Date can\'t be empty' : null;
-  }
-
-  static String validateEndDate(String value) {
-    return value.isEmpty ? 'End Date can\'t be empty' : null;
-  }
-}
-
 class ToDoListForm extends StatefulWidget {
   ToDoListForm(
       {this.id, this.parentTitle, this.parentStartDate, this.parentEndDate});
@@ -165,7 +151,8 @@ class _ToDoListFormState extends State<ToDoListForm> {
                     ),
                     child: TextFormField(
                       initialValue: widget.parentTitle,
-                      validator: FieldValidator.validateTitle,
+                      validator: (value) =>
+                          value.isEmpty ? 'Title can\'t be empty' : null,
                       onChanged: (value) {
                         setState(() {
                           newTitle = value;
@@ -193,7 +180,8 @@ class _ToDoListFormState extends State<ToDoListForm> {
                     child: TextFormField(
                       //initialValue: widget.parentStartDate,
                       controller: startDate,
-                      validator: FieldValidator.validateStartDate,
+                      validator: (value) =>
+                          value.isEmpty ? 'Start Date can\'t be empty' : null,
                       onTap: _pickedDateStart,
                       keyboardType: TextInputType.datetime,
                       decoration: InputDecoration(
@@ -218,7 +206,8 @@ class _ToDoListFormState extends State<ToDoListForm> {
                     child: TextFormField(
                       //initialValue: widget.parentEndDate,
                       controller: endDate,
-                      validator: FieldValidator.validateEndDate,
+                      validator: (value) =>
+                          value.isEmpty ? 'End Date can\'t be empty' : null,
                       onTap: _pickedDateEnd,
                       keyboardType: TextInputType.multiline,
                       decoration: InputDecoration(
