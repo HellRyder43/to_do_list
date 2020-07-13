@@ -5,7 +5,7 @@ The main file is wrapped using ChangeNotifierProvider for this to work.
 
 With this app, you can add you to do items by giving info such as the Title, Start Date and End Date. Then the to do list will show your to do item with a time left for that task.
 
-![alt text](https://ibb.co/P5QFw1b)
+![Screenshot_20200713_081627_com example todolist](https://user-images.githubusercontent.com/46454997/87259989-a7cae880-c4e1-11ea-8530-07856be3b43e.jpg)
 
 ## Getting Started
 
